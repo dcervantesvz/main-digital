@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/main-digital">
       <Routes>
         <Route
           path="/"
