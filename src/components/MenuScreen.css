@@ -1,0 +1,96 @@
+/* MenuScreen.css */
+
+.menu-screen {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Evita el desbordamiento horizontal */
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 300px;
+    /* Altura inicial del header */
+    transition: background-color 0.3s, height 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header.scrolled {
+    background-color: #006b03;
+    /* Color sólido cuando se hace scroll */
+    height: 70px;
+    /* Altura reducida del header */
+}
+
+.logo-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Ajusta la altura del logo al 100% del header */
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+}
+
+.header.scrolled .logo-background {
+    opacity: 0;
+    /* Desaparece la imagen del logo cuando se hace scroll */
+}
+
+.header-content {
+    position: relative;
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Añade espaciado horizontal */
+    height: 100%;
+}
+
+.header.scrolled .header-content {
+    display: flex;
+}
+
+
+
+.welcome-wrapper {
+    text-align: center;
+    flex-grow: 1;
+    /* Permite que el texto de bienvenida se centre */
+}
+
+.welcome-text {
+    font-size: 2rem;
+    color: #fff;
+    transition: font-size 0.3s;
+}
+
+.header.scrolled .welcome-text {
+    font-size: 1.2rem;
+    /* Reduce el tamaño del texto cuando se hace scroll */
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+}
+
+header.header.scrolled~main .product-list {
+    top: 100px;
+}

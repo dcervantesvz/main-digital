@@ -1,0 +1,69 @@
+/* src/components/WelcomeScreen.css */
+body {
+    margin: 0;
+    background-color: #f4e7d7;
+    /* Color de fondo principal */
+}
+
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.logo {
+    width: 170px;
+    /* Tamaño del logo */
+    height: auto;
+
+}
+
+.title {
+    font-size: 32px;
+    color: #006b03;
+    /* Color del texto del título */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #006b03;
+    /* Color del texto del subtítulo */
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #006b03;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Baloo 2', sans-serif;
+
+}
+
+.continue-button {
+    background-color: #ffb120;
+    /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.continue-button:hover {
+    background-color: #e0a316;
+    /* Color del botón al pasar el ratón */
+}

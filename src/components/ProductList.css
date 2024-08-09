@@ -1,0 +1,138 @@
+/* src/components/ProductList.css */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4e7d7;
+    position: absolute;
+    top: 252px;
+}
+
+.category-section {
+    width: 100%;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    /* Ajusta el ancho máximo */
+}
+
+.product-image {
+    width: 150px;
+    /* Ajusta el tamaño de la imagen */
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #006b03;
+    /* Color de texto para el nombre */
+}
+
+.product-ingredients {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.extras {
+    margin: 10px 0;
+}
+
+.extras h3 {
+    font-size: 16px;
+    color: #006b03;
+    /* Color del título de extras */
+}
+
+.extras ul {
+    list-style: none;
+    padding: 0;
+}
+
+.extras li {
+    font-size: 14px;
+    color: #333;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb120;
+    /* Color del precio */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-button {
+    background-color: #006b03;
+    /* Color de los botones */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-to-cart-button {
+    background-color: #ffb120;
+    /* Color del botón de agregar al carrito */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #ff9b00;
+    /* Color del botón en hover */
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    /* Color de fondo de la notificación */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Asegúrate de que la notificación esté sobre otros elementos */
+    font-size: 16px;
+    text-align: center;
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pechuga a la plancha.",
+    "precio": 65,
+    "ingredientes": "Lechuga orejona, pimiento, zanahoria.",
+    "extras": [
+      "Jamon de pavo",
+      "nuez",
+      "arandanos",
+      "manzana verde",
+      "agucate",
+      "fresa"
+    ],
+    "costo_extras": 25,
+    "extras_seleccionables": "3",
+    "categoria": "1"
+  },
+  {
+    "id": 2,
+    "nombre": "Atún",
+    "precio": 65,
+    "ingredientes": "Lechuga orejona, pimiento, zanahoria.",
+    "extras": [
+      "Jamon de pavo",
+      "nuez",
+      "arandanos",
+      "manzana verde",
+      "agucate",
+      "fresa"
+    ],
+    "costo_extras": 25,
+    "extras_seleccionables": "3",
+    "categoria": "1"
+  },
+  {
+    "id": 3,
+    "nombre": "Sencillo",
+    "ingredientes": "2 rebanadas de pan integral, lechuga, tomate, mayonesa, cebolla, jamón.",
+    "precio": 45,
+    "categoria": "2"
+  },
+  {
+    "id": 4,
+    "nombre": "Hulk",
+    "ingredientes": "Espinaca y aguacate.",
+    "precio": 55,
+    "categoria": "2"
+  },
+  {
+    "id": 5,
+    "nombre": "Poderoso",
+    "ingredientes": "Pechuga de pollo y 2 rebanadas de jamón.",
+    "precio": 65,
+    "categoria": "2"
+  },
+  {
+    "id": 6,
+    "nombre": "Supremo",
+    "ingredientes": "1 Pechuga de pollo, queso panela, 2 rebanadas de jamón, incluye aguacate y aderezo ranch.",
+    "precio": 85,
+    "categoria": "2"
+  },
+  {
+    "id": 7,
+    "nombre": "Nutritivo",
+    "ingredientes": "Naranja, zanahoria, apio y piña.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 8,
+    "nombre": "Nutritivo",
+    "ingredientes": "Betabel, naranja y espinaca.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 9,
+    "nombre": "Nutritivo",
+    "ingredientes": "Zanahoria, betabel, naranja y perejil.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 10,
+    "nombre": "Nutritivo",
+    "ingredientes": "Toronja y frutos rojos.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 11,
+    "nombre": "Digestivos",
+    "ingredientes": "Jugo verde: Naranja o toronja, piña, nopal, apio, perejil y espinaca.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 12,
+    "nombre": "Digestivos",
+    "ingredientes": "Papaya, piña y toronja.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 13,
+    "nombre": "Digestivos",
+    "ingredientes": "Toronja, piña y apio.",
+    "precio": 45,
+    "categoria": "3"
+  },
+  {
+    "id": 14,
+    "nombre": "Limon",
+    "ingredientes": "",
+    "precio": 30,
+    "categoria": "4"
+  },
+  {
+    "id": 15,
+    "nombre": "Piña",
+    "ingredientes": "",
+    "precio": 30,
+    "categoria": "4"
+  },
+  {
+    "id": 16,
+    "nombre": "Melón",
+    "ingredientes": "",
+    "precio": 30,
+    "categoria": "4"
+  },
+  {
+    "id": 17,
+    "nombre": "Sandia",
+    "ingredientes": "",
+    "precio": 30,
+    "categoria": "4"
+  },
+  {
+    "id": 18,
+    "nombre": "Jamaica",
+    "ingredientes": "",
+    "precio": 30,
+    "categoria": "4"
+  },
+  {
+    "id": 19,
+    "nombre": "Fresa con leche y granola",
+    "ingredientes": "",
+    "precio": 45,
+    "categoria": "5"
+  }
+]
