@@ -1,4 +1,4 @@
-// ./components/ProductList.js
+// src/components/ProductList.js
 import React, { useState, useEffect } from "react";
 import productData from "../data/productos.json";
 import categoryData from "../data/categorias.json";

@@ -23,12 +23,12 @@
     width: 100%;
     max-width: 600px;
     margin-bottom: 15px;
-    /* Ajusta el ancho máximo */
+    opacity: 0;
+    animation: dropIn 0.5s ease-out forwards;
 }
 
 .product-image {
     width: 150px;
-    /* Ajusta el tamaño de la imagen */
     height: 150px;
     object-fit: cover;
 }
@@ -135,4 +135,17 @@
     /* Asegúrate de que la notificación esté sobre otros elementos */
     font-size: 16px;
     text-align: center;
+}
+
+/* Añadir animación de caída */
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -1,3 +1,4 @@
+// src/components/MenuScreen.js
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import ProductList from "./ProductList";
@@ -11,10 +12,11 @@ const MenuScreen = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cart, setCart] = useState([]);
+  const [isLogoVisible, setIsLogoVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80); // Cambia el estado al hacer scroll
+      setScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,11 +25,15 @@ const MenuScreen = () => {
   }, []);
 
   useEffect(() => {
-    // Cargar carrito desde localStorage
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       setCart(JSON.parse(storedCart));
     }
+  }, []);
+
+  useEffect(() => {
+    // Activar la visibilidad del logo después de la animación
+    setIsLogoVisible(true);
   }, []);
 
   const handleGoToCart = () => {
@@ -77,9 +83,13 @@ const MenuScreen = () => {
   }
 
   return (
-    <div className="menu-screen">
+    <div className={`menu-screen ${isLogoVisible ? "show-logo" : ""}`}>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
-        <img src={logo} alt="Logo" className="logo-background" />
+        <img
+          src={logo}
+          alt="Logo"
+          className={`logo-background ${isLogoVisible ? "animate" : ""}`}
+        />
         <div className="header-content">
           <div className="welcome-wrapper">
             <h1 className="welcome-text">

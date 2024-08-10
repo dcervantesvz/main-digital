@@ -1,39 +1,39 @@
 // src/components/WelcomeScreen.js
 import React, { useState } from "react";
-import logo from "../assets/logo.png"; // Ajusta la ruta según tu estructura
-import "./WelcomeScreen.css"; // Importa el CSS actualizado
+import logo from "../assets/logo.png";
+import "./WelcomeScreen.css";
 import { isMobile } from "react-device-detect";
 
 const WelcomeScreen = ({ onContinue }) => {
   const [name, setName] = useState("");
-  const [address, setAddress] = useState(""); // Nuevo estado para la dirección
-  const [notification, setNotification] = useState(""); // Estado para la notificación
+  const [address, setAddress] = useState("");
+  const [notification, setNotification] = useState("");
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  // Manejar el cambio en el campo del nombre y convertir a mayúsculas
   const handleNameChange = (event) => {
     setName(event.target.value.toUpperCase());
   };
 
-  // Manejar el cambio en el campo de la dirección y convertir a mayúsculas
   const handleAddressChange = (event) => {
     setAddress(event.target.value.toUpperCase());
   };
 
-  // Mostrar notificación
   const showNotification = (message) => {
     setNotification(message);
-    setTimeout(() => setNotification(""), 3000); // Ocultar notificación después de 3 segundos
+    setTimeout(() => setNotification(""), 3000);
   };
 
-  // Validar que todos los campos estén llenos antes de continuar
   const handleContinue = () => {
     if (name.trim() === "" || address.trim() === "") {
       showNotification("Por favor, completa todos los campos.");
       return;
     }
     localStorage.setItem("nombre", name);
-    localStorage.setItem("direccion", address); // Guardar la dirección en localStorage
-    onContinue();
+    localStorage.setItem("direccion", address);
+    setIsAnimating(true);
+    setTimeout(() => {
+      onContinue();
+    }, 500); // Tiempo de duración de la animación
   };
 
   if (!isMobile) {
@@ -45,8 +45,12 @@ const WelcomeScreen = ({ onContinue }) => {
   }
 
   return (
-    <div className="welcome-screen">
-      <img src={logo} alt="Logo" className="logo" />
+    <div className={`welcome-screen ${isAnimating ? "animate-logo" : ""}`}>
+      <img
+        src={logo}
+        alt="Logo"
+        className={`logo ${isAnimating ? "animate" : ""}`}
+      />
       <h1 className="title">Bienvenido</h1>
       <p className="subtitle">¿Puedes darnos tu nombre y dirección?</p>
       <input

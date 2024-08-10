@@ -67,3 +67,26 @@ body {
     background-color: #e0a316;
     /* Color del botón al pasar el ratón */
 }
+
+
+.welcome-screen {
+    /* Otros estilos */
+    position: relative;
+    /* Asegúrate de que el contenedor tenga posición relativa para la animación */
+}
+
+.logo {
+    /* Otros estilos */
+    transition: transform 0.5s ease-in-out;
+    /* Transición suave para el logo */
+}
+
+.animate-logo .logo {
+    transform: scale(0.5) translateY(-50px);
+    /* Ajusta la animación del logo */
+}
+
+.animate-logo {
+    overflow: hidden;
+    /* Asegura que el logo no desborde el contenedor durante la animación */
+}
