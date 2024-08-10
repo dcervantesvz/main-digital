@@ -1,8 +1,8 @@
-// src/components/MenuScreen.js
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import ProductList from "./ProductList";
 import CartModal from "./CartModal";
+import ProfileModal from "./ProfileModal";
 import "./MenuScreen.css";
 import { isMobile } from "react-device-detect";
 import useWindowSize from "../utils/useWindowSize";
@@ -11,12 +11,13 @@ const MenuScreen = () => {
   const { width } = useWindowSize();
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false); // Nuevo estado para el modal de perfil
   const [cart, setCart] = useState([]);
   const [isLogoVisible, setIsLogoVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 80); // Cambia el estado al hacer scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,6 +26,7 @@ const MenuScreen = () => {
   }, []);
 
   useEffect(() => {
+    // Cargar carrito desde localStorage
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       setCart(JSON.parse(storedCart));
@@ -32,7 +34,6 @@ const MenuScreen = () => {
   }, []);
 
   useEffect(() => {
-    // Activar la visibilidad del logo después de la animación
     setIsLogoVisible(true);
   }, []);
 
@@ -74,6 +75,14 @@ const MenuScreen = () => {
     });
   };
 
+  const handleGoToProfile = () => {
+    setIsProfileModalOpen(true);
+  };
+
+  const closeProfileModal = () => {
+    setIsProfileModalOpen(false);
+  };
+
   if (!isMobile && width > 650) {
     return (
       <div>
@@ -91,6 +100,9 @@ const MenuScreen = () => {
           className={`logo-background ${isLogoVisible ? "animate" : ""}`}
         />
         <div className="header-content">
+          <button className="profile-button" onClick={handleGoToProfile}>
+            <i className="fas fa-user"></i>
+          </button>
           <div className="welcome-wrapper">
             <h1 className="welcome-text">
               {localStorage.getItem("nombre") || "Invitado"}
@@ -105,6 +117,7 @@ const MenuScreen = () => {
         <ProductList onAddToCart={handleAddToCart} />
       </main>
       {isModalOpen && <CartModal cart={cart} onClose={closeModal} />}
+      {isProfileModalOpen && <ProfileModal onClose={closeProfileModal} />}{" "}
     </div>
   );
 };
